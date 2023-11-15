@@ -1,0 +1,54 @@
+/* Aplicar a todo o CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Redimensionar a logo */
+div > .Logo img {
+    width: 50%;
+    height: auto;
+    border: 9px solid red;
+}
+
+/* Aplicar ao body */
+body {
+    background-color: black;
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif; /*ADD google fonts*/
+}
+
+/* Estilo do Cabeçalho */
+header {
+    padding: 40px 4%;
+    background-color: black;
+    border: 2px solid white; /* Adiciona uma borda branca sólida */
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px; /* Reduzi o espaçamento para evitar problemas */
+}
+
+
+header .button-contato button {
+    padding: 10px 20px; /* Reduzi o espaçamento para evitar problemas */
+}
