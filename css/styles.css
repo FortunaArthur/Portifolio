@@ -1,54 +1,58 @@
-/* Aplicar a todo o CSS */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Redimensionar a logo */
-div > .Logo img {
-    width: 50%;
-    height: auto;
-    border: 9px solid red;
+.navbar {
+    overflow: hidden;
+    background-color: #333;
 }
 
-/* Aplicar ao body */
-body {
-    background-color: black;
-    height: 100vh;
-    font-family: 'Josefin Sans', sans-serif; /*ADD google fonts*/
-}
-
-/* Estilo do Cabeçalho */
-header {
-    padding: 40px 4%;
-    background-color: black;
-    border: 2px solid white; /* Adiciona uma borda branca sólida */
-}
-
-header .interface {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header a {
-    color: white;
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
-header nav ul li {
-    display: inline-block;
-    padding: 0 40px; /* Reduzi o espaçamento para evitar problemas */
+.navbar .icon {
+    display: none;
 }
 
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
 
-header .button-contato button {
-    padding: 10px 20px; /* Reduzi o espaçamento para evitar problemas */
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
